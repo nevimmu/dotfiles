@@ -1,0 +1,54 @@
+@import "rose-pine-moon.css";
+
+* {
+	font-family: "CartographCF Nerd Font";
+	font-size: 16px;
+	min-height: 0;
+	font-weight: bold;
+	color: @text;
+}
+
+window#waybar {
+	background-color: rgba(57, 53, 82, .9);
+	border-radius: 10px;
+	/* border: 2px solid @muted; */
+}
+
+#custom-spacer {
+	opacity: 0;
+}
+
+#workspaces button {
+	background: inherit;
+	border: none;
+	margin-left: -5px;
+}
+
+#workspaces button label {
+	font-size: 20px;
+}
+
+#workspaces button.urgent {
+	color: @love;
+}
+
+#workspaces button:hover {
+	background: inherit;
+	color: @iris;
+}
+
+#custom-server_temp {
+	color: @love;
+}
+
+#custom-audio_switch {
+	color: @pine;
+}
+
+#clock {
+	color: @iris;
+	font-weight: 900;
+	font-style: italic;
+	font-size: 25px;
+	margin-bottom: -8px;
+}

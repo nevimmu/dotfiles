@@ -1,0 +1,26 @@
+{
+    "workbench.colorTheme": "Rosé Pine Moon",
+    "editor.fontFamily": "'CartographCF Nerd Font'",
+    "editor.fontSize": 24,
+    "editor.fontLigatures": true,
+    "editor.fontWeight": "bold",
+    "workbench.sideBar.location": "right",
+
+    "python.languageServer": "Jedi",
+
+    "keyboard.dispatch": "keyCode",
+    "vim.handleKeys": {
+        "<C-d>": true,
+        "<C-s>": false,
+        "<C-z>": false,
+        "<C-b>": false
+    },
+    "editor.insertSpaces": false,
+    "editor.tabSize": 2,
+    "explorer.confirmDragAndDrop": false,
+    "git.enableSmartCommit": true,
+    "git.confirmSync": false,
+    "explorer.confirmDelete": false,
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.defaultColorDecorators": "always",
+}

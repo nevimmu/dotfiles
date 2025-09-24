@@ -1,0 +1,27 @@
+{
+  "position": "top",
+	"output": "DP-1",
+  "modules-left": ["hyprland/workspaces"],
+  "modules-center": ["hyprland/window"],
+  "modules-right": ["bluetooth", "custom/server_temp", "custom/audio_switch", "clock", "tray"],
+  "clock": {
+    // "format": " {:%a %d %H:%M}",
+    "format": " {:%H:%M}",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+  },
+  "bluetooth": {
+    "on-click": "kitty --class center-float bluetuith",
+    "format-on": "",
+    "format-connected": " {device_alias}"
+  },
+  "custom/audio_switch": {
+    "exec": "~/.config/waybar/scripts/audio_switch.sh",
+    "on-click": "~/.config/waybar/scripts/audio_switch.sh -s",
+    "tooltip-format": "Beep boop audio",
+    "restart-interval": 1
+  },
+  "custom/server_temp": {
+    "exec": "~/.config/waybar/scripts/server_temp.sh",
+    "tooltip-format": "Maid0"
+  }
+}
