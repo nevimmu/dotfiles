@@ -6,7 +6,7 @@
     "editor.fontWeight": "bold",
     "workbench.sideBar.location": "right",
 
-    "python.languageServer": "Jedi",
+    "python.languageServer": "Pylance",
 
     "keyboard.dispatch": "keyCode",
     "vim.handleKeys": {
