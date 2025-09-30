@@ -1,6 +1,6 @@
 #! /bin/sh
 
-option=$(printf "Lock\nSuspend\nReboot\nPower Off" | wofi -dmenu -i)
+option=$(printf "Lock\nSuspend\nReboot\nPower Off" | rofi -dmenu -i)
 
 case "$option" in
 	"Lock") hyprlock ;;
