@@ -21,11 +21,11 @@ window#waybar {
 #workspaces button {
 	background: inherit;
 	border: none;
-	margin-left: -5px;
+	margin-left: 0px;
 }
 
 #workspaces button label {
-	font-size: 20px;
+	font-size: 25px;
 }
 
 #workspaces button.urgent {
