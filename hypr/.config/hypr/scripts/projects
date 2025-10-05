@@ -1,0 +1,10 @@
+#! /bin/sh
+PROJECTS_DIR="${HOME}/Documents/projects/"
+
+CHOICE=$(ls $PROJECTS_DIR | rofi -dmenu -i -p Projects)
+
+if [ -z $CHOICE ]; then
+	exit
+fi
+
+code $PROJECTS_DIR$CHOICE

@@ -23,4 +23,5 @@
     "explorer.confirmDelete": false,
     "workbench.iconTheme": "material-icon-theme",
     "editor.defaultColorDecorators": "always",
+    "terminal.integrated.stickyScroll.enabled": false,
 }

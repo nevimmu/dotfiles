@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Dotfiles
+Comment=Edit my dotfiles
+Exec=code dotfiles/
+Icon=visual-studio-code
+Terminal=false
+Type=Application
