@@ -70,7 +70,6 @@
 		"spacing": 3
 	},
 	"hyprland/window": {
-		//"format": "{}"   // <--- these is the default value  
 		"format": "{class}",
 		"rotate": 90,
 		"max-length": 120,
@@ -80,16 +79,12 @@
 	"hyprland/workspaces": {
 		"format": "{icon}",
 		"format-icons": {
-			// "1": "",
-			// "2": "",
-			// "3": "",
-			// "4": "",
-			// "6": "",
-			// "7": "",
-			// "8": "",
-			// "9": "",
-			"default": "󰽤",
-			"active": "󰽢"
+			"default": "",
+			"active": "",
+			"empty": ""
+		},
+		"persistent-workspaces": {
+			"DP-1": ["1", "2", "3", "4", "5"]
 		}
 	},
 	"clock#H": {
