@@ -24,4 +24,5 @@
     "workbench.iconTheme": "material-icon-theme",
     "editor.defaultColorDecorators": "always",
     "terminal.integrated.stickyScroll.enabled": false,
+    "workbench.secondarySideBar.defaultVisibility": "hidden",
 }
