@@ -25,4 +25,6 @@
     "editor.defaultColorDecorators": "always",
     "terminal.integrated.stickyScroll.enabled": false,
     "workbench.secondarySideBar.defaultVisibility": "hidden",
+    "github.copilot.nextEditSuggestions.enabled": true,
+    "chat.editing.confirmEditRequestRemoval": false,
 }

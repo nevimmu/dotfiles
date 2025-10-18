@@ -1,0 +1,31 @@
+{
+	"terminal_classes":[
+		"kitty",
+		"mpv",
+		"imv",
+		"org.gnome.Nautilus",
+		"org.kde.filelight"
+	],
+	"ignore_titles":[
+		"notificationtoasts_\\d+_desktop",
+		"DVD"
+	],
+	"monitors":{
+		"HDMI-A-1":{
+			"width":767,
+			"height":1364,
+			"offset":[
+				0,
+				0
+			]
+		},
+		"DP-1":{
+			"width":1818,
+			"height":1023,
+			"offset":[
+				0,
+				0
+			]
+		}
+	}
+}
