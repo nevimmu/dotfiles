@@ -4,10 +4,12 @@
 		"mpv",
 		"imv",
 		"org.gnome.Nautilus",
-		"org.kde.filelight"
+		"org.kde.filelight",
+		"org.prismlauncher.PrismLauncher"
 	],
 	"ignore_titles":[
 		"notificationtoasts_\\d+_desktop",
+		"Timeshift-gtk",
 		"DVD"
 	],
 	"monitors":{
