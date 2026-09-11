@@ -1,0 +1,20 @@
+#! /bin/sh
+PROJECTS_DIR="${HOME}/Projects/"
+
+CHOICE=$(printf "$(ls $PROJECTS_DIR)\nCREATE NEW" | rofi -dmenu -i -p Projects)
+
+if [ -z $CHOICE ]; then
+	exit
+fi
+
+if [ "$CHOICE" = "CREATE NEW" ]; then
+	NEW_PROJECT=$(rofi -dmenu -i -p "New project name")
+	if [ -n "$NEW_PROJECT" ]; then
+		mkdir -p "$PROJECTS_DIR$NEW_PROJECT"
+		code "$PROJECTS_DIR$NEW_PROJECT"
+	fi
+else
+	code "$PROJECTS_DIR$CHOICE"
+fi
+
+

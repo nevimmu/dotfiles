@@ -1,0 +1,99 @@
+* {
+    font-family: "CartographCF Nerd Font";
+    font-size: 10pt;
+}
+
+@define-color base00 #232136; @define-color base01 #2a273f;
+@define-color base02 #393552; @define-color base03 #6e6a86;
+@define-color base04 #908caa; @define-color base05 #e0def4;
+@define-color base06 #e0def4; @define-color base07 #56526e;
+
+@define-color base08 #eb6f92; @define-color base09 #f6c177;
+@define-color base0A #ea9a97; @define-color base0B #3e8fb0;
+@define-color base0C #9ccfd8; @define-color base0D #c4a7e7;
+@define-color base0E #f6c177; @define-color base0F #56526e;
+
+			* {
+				font-family: "CartographCF Nerd Font";
+				font-size: 16px;
+				min-height: 0;
+				font-weight: bold;
+			}
+
+		window#waybar {
+			background-color: alpha(@base02, 0.9); /* rgba(57, 53, 82, .9) */
+			border-radius: 10px;
+			color: @base05; /* #e0def4 */
+		}			#custom-spacer {
+				opacity: 0;
+			}
+
+			#workspaces button {
+				background: inherit;
+				border: none;
+				margin-left: -8px;
+				margin-bottom: -10px;
+				padding: 0px;
+				color: @base05; /* #e0def4 */
+			}
+
+			#workspaces button label {
+				font-size: 28px;
+			}
+
+			#workspaces button.urgent {
+				color: @base08; /* #eb6f92 */
+			}
+
+			#workspaces button:hover {
+				background: inherit;
+				box-shadow: none;
+				text-shadow: none;
+				border: none;
+				color: @base0D; /* #c4a7e7 */
+			}
+
+			#custom-server_temp {
+				color: @base08; /* #eb6f92 */
+			}
+
+			#custom-audio_switch {
+				color: @base0B; /* #3e8fb0 */
+				padding-left: 20px;
+			}
+
+			#custom-menu {
+				padding-left: 20px;
+			}
+
+			#tray {
+				background: inherit;
+			}
+
+			#clock {
+				color: @base0D; /* #c4a7e7 */
+				background: inherit;
+				font-weight: 900;
+				font-style: italic;
+				font-size: 25px;
+				margin-bottom: -8px;
+			}
+
+			#battery {
+				color: @base05; /* #e0def4 */
+				background: inherit;
+				font-size: 20px;
+			}
+
+			#battery.charging {
+				color: @base0C; /* #9ccfd8 */
+			}
+
+			#battery.warning {
+				color: @base09; /* #f6c177 */
+			}
+
+			#battery.critical {
+				color: @base08; /* #eb6f92 */
+			}
+		

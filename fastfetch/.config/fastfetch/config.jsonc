@@ -1,0 +1,49 @@
+{
+  "display": {
+    "color": {
+      "keys": "cyan",
+      "title": "blue"
+    }
+  },
+  "logo": {
+    "color": {
+      "1": "blue",
+      "2": "cyan"
+    },
+    "padding": {
+      "top": 2
+    },
+    "type": "small"
+  },
+  "modules": [
+    "title",
+    "separator",
+    {
+      "format": "{name}",
+      "type": "os"
+    },
+    "kernel",
+    {
+      "format": "{pacman}",
+      "type": "packages"
+    },
+    {
+      "format": "{pretty-name}",
+      "type": "wm"
+    },
+    {
+      "format": "{pretty-name}",
+      "type": "terminal"
+    },
+    {
+      "format": "CartographCF Nerd Font",
+      "type": "terminalfont"
+    },
+    {
+      "format": "{pretty-name}",
+      "type": "shell"
+    },
+    "theme",
+    "uptime"
+  ]
+}
