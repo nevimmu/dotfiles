@@ -52,6 +52,7 @@ local menu        = "rofi -show drun"
 
 hl.on("hyprland.start", function () 
 	hl.exec_cmd("dunst")
+	hl.exec_cmd("hypridle")
 	hl.exec_cmd("waybar")
 	hl.exec_cmd("jams")
 	hl.exec_cmd("awww-daemon")
@@ -212,7 +213,6 @@ local mainMod = "SUPER"
 -- Basic binds
 hl.bind(mainMod .. " + Return", hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod .. " + Q", hl.dsp.window.close())
-hl.bind(mainMod .. " + SHIFT + M", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch exit"))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + Y", hl.dsp.exec_cmd(terminal .. " yazi"))
 hl.bind(mainMod .. " + T", hl.dsp.exec_cmd(terminal .. " btop"))
