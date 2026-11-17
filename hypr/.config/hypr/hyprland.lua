@@ -19,12 +19,13 @@ hl.monitor({
 	mode          = "2560x1440@169.83",
 	position      = "0x0",
 	scale         = "1",
-	-- cm            = "hdr",
-	-- sdrbrightness = 1.4,
-  -- sdrsaturation = 0.5,
-	-- bitdepth     = 10,
-	-- sdr_max_luminance = 400,
-	-- sdr_min_luminance = 0.0005,
+	supports_hdr = -1,
+	cm                 = "hdr",
+	sdrbrightness      = 1.2,
+	sdrsaturation      = 1.0,
+	bitdepth           = 10,
+	sdr_max_luminance  = 400,
+	sdr_min_luminance  = 0.0005,
 })
 
 -- monitor=HDMI-A-1, 1920x1080@60.00, 2560x-140, 1, transform, 3
@@ -51,10 +52,12 @@ local menu        = "rofi -show drun"
 -------------------
 
 hl.on("hyprland.start", function () 
+	hl.exec_cmd("hyprctl setcursor BreezeX-RosePine-Linux 24")
 	hl.exec_cmd("dunst")
 	hl.exec_cmd("hypridle")
 	hl.exec_cmd("waybar")
-	hl.exec_cmd("jams")
+	hl.exec_cmd("jams --tray")
+	hl.exec_cmd("hypr-float")
 	hl.exec_cmd("awww-daemon")
 	hl.exec_cmd("wl-clip-persist --clipboard both")
 	hl.exec_cmd("wl-paste --watch cliphist store")
@@ -71,6 +74,7 @@ end)
 ---- ENVIRONMENT VARIABLES ----
 -------------------------------
 
+hl.env("XCURSOR_THEME", "BreezeX-RosePine-Linux")
 hl.env("XCURSOR_SIZE", "24")
 hl.env("HYPRCURSOR_SIZE", "24")
 hl.env("HYPRSHOT_DIR", os.getenv("HOME") .. "/Pictures/Screenshots")
@@ -303,7 +307,11 @@ hl.workspace_rule({ workspace = 8, monitor = "HDMI-A-1" })
 hl.workspace_rule({ workspace = 9, monitor = "HDMI-A-1" })
 hl.workspace_rule({ workspace = 10, monitor = "HDMI-A-1", default = true })
 
-hl.workspace_rule({ workspace = "special:scratchpad", on_created_empty = "kitty" })
+hl.on("workspace.created", function (ws)
+	if ws.name == "special:scratchpad" and ws.is_empty then
+		hl.exec_cmd("kitty", { workspace = "special:scratchpad" })
+	end
+end)
 
 -- Window Rules
 hl.window_rule({
@@ -360,6 +368,7 @@ hl.layer_rule({
 	name = "blur-rofi",
 	match = { namespace = "rofi" },
 	blur = true,
+	ignore_alpha = 0.5,
 })
 
 hl.layer_rule({

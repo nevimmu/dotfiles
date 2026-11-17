@@ -12,6 +12,12 @@ gap_size = 3
 font = CartographCF Nerd Font 12
 background = "#393552"
 foreground = "#e0def4"
+dmenu = /usr/bin/rofi -dmenu -p dunst
+enable_recursive_icon_lookup = true
+icon_theme = "Adwaita, breeze, hicolor"
+mouse_left_click =do_action, close_current
+mouse_middle_click = close_all
+mouse_right_click = close_current
 
 [urgency_low]
 background = "#232136f2"
