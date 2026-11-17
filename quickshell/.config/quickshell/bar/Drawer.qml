@@ -4,7 +4,7 @@ import "../theme"
 import "../popups"
 import "../services"
 
-// Waybar-style drawer: a chevron that, on hover, slides the icons above it open (growing upward).
+// Waybar-style drawer: a chevron that, on hover, slides the icons below it open (growing downward).
 // Stays open while the cursor is on it or one of its panels is showing.
 ColumnLayout {
 	id: root
@@ -23,6 +23,15 @@ ColumnLayout {
 		onHoveredChanged: if (!hovered) holdTimer.restart()
 	}
 
+	Text {
+		Layout.alignment: Qt.AlignHCenter
+		text: Icons.chevronUp
+		color: root.expanded ? Theme.iris : Theme.text
+		rotation: 180 * body.reveal
+		font.family: Theme.font
+		font.pixelSize: 22
+	}
+
 	Item {
 		id: body
 		Layout.alignment: Qt.AlignHCenter
@@ -38,13 +47,14 @@ ColumnLayout {
 
 		ColumnLayout {
 			id: items
-			anchors.bottom: parent.bottom // grows upward from the chevron
+			anchors.top: parent.top // grows downward from the chevron
 			anchors.horizontalCenter: parent.horizontalCenter
 			spacing: 8
 
 			BarWidget {
 				id: wNotifs
 				Layout.alignment: Qt.AlignHCenter
+				Layout.topMargin: 6
 				panelContent: NotificationsPanel {}
 				NotificationsIcon {}
 			}
@@ -69,19 +79,9 @@ ColumnLayout {
 			BarWidget {
 				id: wTray
 				Layout.alignment: Qt.AlignHCenter
-				Layout.bottomMargin: 6
 				panelContent: TrayPanel {}
 				TrayIcon {}
 			}
 		}
-	}
-
-	Text {
-		Layout.alignment: Qt.AlignHCenter
-		text: Icons.chevronUp
-		color: root.expanded ? Theme.iris : Theme.text
-		rotation: 180 * body.reveal
-		font.family: Theme.font
-		font.pixelSize: 22
 	}
 }
