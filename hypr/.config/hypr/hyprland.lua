@@ -53,11 +53,12 @@ local menu        = "rofi -show drun"
 
 hl.on("hyprland.start", function () 
 	hl.exec_cmd("hyprctl setcursor BreezeX-RosePine-Linux 24")
-	hl.exec_cmd("dunst")
 	hl.exec_cmd("hypridle")
-	hl.exec_cmd("waybar")
-	hl.exec_cmd("jams --tray")
-	hl.exec_cmd("hypr-float")
+	-- hl.exec_cmd("dunst")   -- replaced by quickshell (notifications)
+	-- hl.exec_cmd("waybar")  -- replaced by quickshell
+	hl.exec_cmd("quickshell")
+	hl.exec_cmd("jams")
+	hl.exec_cmd("lilypad")
 	hl.exec_cmd("awww-daemon")
 	hl.exec_cmd("wl-clip-persist --clipboard both")
 	hl.exec_cmd("wl-paste --watch cliphist store")
@@ -372,7 +373,8 @@ hl.layer_rule({
 })
 
 hl.layer_rule({
-	name = "blur-waybar",
-	match = { namespace = "waybar" },
+	name = "blur-quickshell",
+	match = { namespace = "qs-bar" },
 	blur = true,
+	ignore_alpha = 0.5,
 })

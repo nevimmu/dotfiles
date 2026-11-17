@@ -1,0 +1,13 @@
+{
+  "weather": {
+    "city": "",
+    "country": "",
+    "units": "celsius"
+  },
+  "audio": {
+    "speakerSink": "",
+    "headsetSink": "",
+    "earbudsMac": "",
+    "earbudsName": ""
+  }
+}

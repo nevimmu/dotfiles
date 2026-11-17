@@ -1,0 +1,7 @@
+singleton PopupState 1.0 PopupState.qml
+singleton Audio 1.0 Audio.qml
+singleton Weather 1.0 Weather.qml
+singleton Stats 1.0 Stats.qml
+singleton Countdown 1.0 Countdown.qml
+singleton Notifs 1.0 Notifs.qml
+singleton Jams 1.0 Jams.qml
