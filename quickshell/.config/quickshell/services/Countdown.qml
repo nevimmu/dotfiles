@@ -1,6 +1,7 @@
 pragma Singleton
 import QtQuick
 import Quickshell
+import Quickshell.Io
 
 // Countdown timer + stopwatch. Both keep running while the panel is closed.
 Singleton {
@@ -36,6 +37,25 @@ Singleton {
 		mode = "idle";
 		remaining = total;
 	}
+	function stopAlarm() {
+		alarm.running = false;
+	}
+
+	// Alarm sound (kept as a Process so a click on the notification can stop it)
+	Process {
+		id: alarm
+		command: ["paplay", "/usr/share/sounds/freedesktop/stereo/alarm-clock-elapsed.oga"]
+	}
+
+	// Once finished, reset itself after 10 s
+	Timer {
+		interval: 10000
+		running: root.mode === "done"
+		onTriggered: {
+			root.stopAlarm();
+			root.reset();
+		}
+	}
 
 	function fmt(sec) {
 		const s = Math.ceil(sec);
@@ -55,7 +75,7 @@ Singleton {
 			if (root.remaining <= 0) {
 				root.mode = "done";
 				Quickshell.execDetached(["notify-send", "-a", "Timer", "-u", "critical", "Timer finished", root.fmt(root.total) + " elapsed"]);
-				Quickshell.execDetached(["sh", "-c", "paplay /usr/share/sounds/freedesktop/stereo/alarm-clock-elapsed.oga 2>/dev/null"]);
+				alarm.running = true;
 			}
 		}
 	}
