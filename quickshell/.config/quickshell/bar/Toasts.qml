@@ -55,7 +55,7 @@ PanelWindow {
 				implicitWidth: Math.min(root.maxToastWidth, content.implicitWidth + 24)
 				implicitHeight: content.implicitHeight + 24 + (critical ? 0 : 6)
 				radius: 10
-				color: Qt.alpha(Theme.base, 0.95)
+				color: Qt.alpha(Theme.overlay, 0.93) // same colour and opacity as the bar background
 				border.width: 2
 				border.color: accent
 

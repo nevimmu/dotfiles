@@ -366,15 +366,8 @@ hl.window_rule({
 
 -- Layer Rules
 hl.layer_rule({
-	name = "blur-rofi",
-	match = { namespace = "rofi" },
-	blur = true,
-	ignore_alpha = 0.5,
-})
-
-hl.layer_rule({
-	name = "blur-quickshell",
-	match = { namespace = "qs-bar" },
+	name = "blur-layers",
+	match = { namespace = "^(rofi|qs-bar|qs-toasts)$" },
 	blur = true,
 	ignore_alpha = 0.5,
 })
