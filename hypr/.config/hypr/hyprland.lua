@@ -358,7 +358,7 @@ hl.window_rule({
 hl.window_rule({
 	name = "PIP",
 	match = { title = "Picture-in-Picture" },
-	workspace = 10,
+	workspace = "10 silent",
 	float = true,
 	size = { 1056, 944 },
 	move = { 12, 12 },
